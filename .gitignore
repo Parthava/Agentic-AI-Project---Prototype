@@ -1,0 +1,41 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+.env
+.env.local
+
+# Project data - bade files git pe mat daal
+data/
+*.pdf
+*.json
+!pyproject.toml
+!uv.lock
+
+# Vector DB & embeddings
+chroma_db/
+faiss_index/
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
