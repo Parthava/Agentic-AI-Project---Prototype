@@ -57,7 +57,7 @@ app = FastAPI(title="Agentic AI Project Prototype", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # production me specific domain daalo
+    allow_origins=["*"],  # specific domain in production
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -138,9 +138,9 @@ def query_endpoint(req: QueryRequest):
         raise HTTPException(500, f"Query failed: {e}") from e
 
 
-@app.post("/clear")
-def clear_db():
-    if rag_retriever is None or vector_store is None:
-        raise HTTPException(503, "Service not ready")
-    rag_retriever.clear_db()
-    return {"status": "cleared", "remaining": vector_store.collection.count()}
+# @app.post("/clear")
+# def clear_db():
+#     if rag_retriever is None or vector_store is None:
+#         raise HTTPException(503, "Service not ready")
+#     rag_retriever.clear_db()
+#     return {"status": "cleared", "remaining": vector_store.collection.count()}
