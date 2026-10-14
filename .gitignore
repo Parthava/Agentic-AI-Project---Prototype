@@ -14,12 +14,11 @@ venv/
 .env
 .env.local
 
-# Project data - bade files git pe mat daal
-data/
+# Project data
+data/vector_store/
 *.pdf
+!data/*.pdf
 *.json
-!pyproject.toml
-!uv.lock
 
 # Vector DB & embeddings
 chroma_db/
